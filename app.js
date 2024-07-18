@@ -35,17 +35,17 @@ app.post('/create', (req, res) => {
                 password: hash,
                 age
             });
-
-
             // Generating Token
             let token = jwt.sign({ email }, "M0hdFaraz");
             res.cookie("token", token);
 
-            res.redirect('login');
+            res.redirect('success');
         })
     })
+})
 
-
+app.get('/success', (req,res)=>{
+    res.render('success');
 })
 
 app.get('/login', (req, res) => {
