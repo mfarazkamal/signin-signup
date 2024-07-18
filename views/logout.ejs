@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body  class="w-full h-screen bg-zinc-700">
+    <h2 class="text-3xl font-bold ml-10 mt-5 text-white">Logged In  </h2>
+    <div class="w-1/3 my-10 mx-10">
+        <p class="text-3xl w-3/4 border-2 mt-3 p-4 rounded-md font-bold uppercase text-white"><span class="text-yellow-500">Welcome</span> <%= user.username %></p>
+        <p class="text-xl w-3/4 border-2 mt-3 p-4 rounded-md font-bold uppercase text-white"><span class="text-yellow-500">Your Email is</span> <%= user.email %></p>
+        <p class="text border-2 w-3/4 p-4 rounded-md mt-3 font-bold uppercase text-white"><span class="text-yellow-500">Your age is</span> <%= user.age %></p>
+        <form class="mt-4" action="/logout" method="get">
+            <input class="px-4 py-2 mt-4 mr-2 rounded-md bg-red-800 hover:bg-red-700 text-white" type="submit" value="Logout">
+        </form>
+        <!-- <div class="mt-4">
+            <p class="text-white">Don't have an account <a class="text-blue-500 underline" href="/">Signup</a></p>
+        </div> -->
+    </div>
+</body>
+</html>
