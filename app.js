@@ -3,10 +3,11 @@ const express = require("express");
 const path = require("path");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
+const dotenv = require("dotenv");
 
+dotenv.config();
 const authModel = require("./models/user");
 const { hash } = require("crypto");
-
 
 
 const app = express();

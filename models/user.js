@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://localhost:27017/authtestapp");
+mongoose.connect(process.env.MONGO_DB_URL);
+// mongoose.connect("mongodb://localhost:27017/authtestapp");
 
 const authSchema = mongoose.Schema({
     username: String,
